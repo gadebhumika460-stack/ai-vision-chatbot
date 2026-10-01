@@ -11,10 +11,7 @@ st.set_page_config(
 st.title("👁️ AI Vision Chatbot")
 st.write("Upload an image and ask questions about it!")
 
-api_key = st.text_input(
-    "Enter your OpenAI API Key",
-    type="password"
-)
+api_key = st.secrets["OPENAI_API_KEY"]
 
 uploaded_file = st.file_uploader(
     "Upload an image",
