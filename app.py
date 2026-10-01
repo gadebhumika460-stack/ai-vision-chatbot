@@ -9,7 +9,8 @@ st.set_page_config(
 )
 
 st.title("👁️ AI Vision Chatbot")
-st.write("Upload an image and ask questions about it!")
+st.caption("Upload an image and ask questions using AI-powered vision.")
+st.divider()
 
 api_key = st.secrets["OPENAI_API_KEY"]
 
@@ -19,7 +20,13 @@ uploaded_file = st.file_uploader(
 )
 
 question = st.text_input(
-    "Ask something about the image:"
+    "Ask something about the image:",
+    placeholder="Example: What is shown in this image?"
+)
+
+st.caption(
+    "💡 Try: What is shown here? | Describe the image | "
+    "What objects can you identify?"
 )
 
 if uploaded_file:
