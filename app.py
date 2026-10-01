@@ -73,5 +73,11 @@ if st.button("🔍 Analyze Image"):
             st.subheader("🤖 AI Response")
             st.write(response.output_text)
 
-        except Exception as e:
-            st.error(f"Something went wrong: {e}")
+        except Exception:
+            st.warning("⚠️ AI analysis is currently unavailable.")
+
+            st.info(
+                "🎯 Demo Mode: The image was uploaded successfully. "
+                "In the full version, the AI Vision model analyzes the "
+                "image and answers the user's question."
+            )
